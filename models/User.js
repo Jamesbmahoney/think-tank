@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
   username: {
@@ -29,3 +29,7 @@ const userSchema = new Schema({
   // prevents virtuals from creating duplicate of _id as `id`
   id: false
 });
+
+const User = model('User', userSchema);
+
+module.exports = User;
