@@ -30,7 +30,7 @@ const thoughtController = {
       });
   },
 
-  addThought({ body }, res) {
+  addThought({ params, body }, res) {
     Thought.create(body)
       .then(({ _id }) => {
         console.log(_id);
