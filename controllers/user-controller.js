@@ -19,7 +19,7 @@ const userController = {
         path: "friends",
       })
       .populate({
-          path: "thoughts",
+        path: "thoughts",
       })
       .then((dbUserData) => {
         if (!dbUserData) {
